@@ -230,7 +230,7 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 /*计件*/
 .Spinner{display:block;overflow:hidden;margin:0.24rem; float:right;}
 .Spinner .Amount{width:.6rem;height:.4rem;line-height:.4rem;border-width:.01rem;border-style:solid;border-color:#34adfc;float:left;text-align:center;color:#565656;
-	outline:0;}
+	outline:0; vertical-align: middle;}
 .Spinner a{display:inline-block;width:.6rem;height:.4rem;border:.01rem solid #34adfc;background-color:#fff;float:left;cursor:pointer;outline:0;}
 .Spinner a i{font-style:normal;display:block;width:.32rem;height:.4rem;margin:0 .08rem;text-indent:999999%;overflow:hidden;}
 .Spinner .Decrease i{background-position:-.09rem -.09rem;background:url(../images/icon9.png) no-repeat;}
