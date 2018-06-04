@@ -222,8 +222,6 @@
 			selBrandModel();
 			//车型选择后赋值
 			selCarModels();
-			//选择上牌时间
-			selDate();
 			//获取验证码
 			getCode();
 		});
@@ -346,26 +344,6 @@
 					$(".js-popBrandBox1").val(modelName+modelsName);
 				}
 				closePop(that);
-			});
-		}
-		//选择上牌时间
-		function selDate(){
-			var that=$(".js-popDateBox");
-			that.focus(function(event) {
-				that.blur();
-			});
-			var calendar = new datePicker();
-			calendar.init({
-			    'trigger': '.js-popDateBox',
-			    'type': 'date',
-			    'minDate':'1900-1-1',
-			    'maxDate':'2100-12-31',
-			    'onSubmit':function(){/*确认时触发事件*/
-			        var theSelectData=calendar.value;
-			    },
-			    'onClose':function(){/*取消时触发事件*/
-			    	
-			    }
 			});
 		}
 		//获取验证码
