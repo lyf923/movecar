@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
@@ -10,6 +10,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="stylesheet" href="css/cui.css" />
 	<link rel="stylesheet" href="css/movecar.css" />
+    <link rel="stylesheet" href="css/sel.css" />
+    <script src="js/selCity.js"></script>
     <script src="js/jquery.js"></script>
 	
 </head>
@@ -43,7 +45,7 @@
 			<li>
 				<span class="tit"></i>联系方式</span>
 				<div class="con con1 con2">
-					<input type="text" class="inp inp1" placeholder="15635566985">
+					<input type="text" class="inp inp1" placeholder="请输入联系方式">
 					<input type="button" class="btn-code" value="获取验证码">
 				</div>
 			</li>
@@ -64,8 +66,80 @@
     
       <p class="cen button">提交</p>
        <div style=" height:1rem;"></div>
+
+
+	<!-- 验证码层 -->
+	<div class="m-popBox1 m-popCode">
+		<div class="bg"></div>
+		<div class="pop_con1">
+			<div class="m-codeBox">
+				<div class="con">
+					<input type="text" class="inp" placeholder="请输入验证码" maxlength="4">
+					<img src="images/img-code.png" alt="">
+				</div>
+				<ul class="btns">
+					<li><input type="button" class="btn sub" value="确定"></li>
+					<li><input type="button" class="btn cancel" value="取消"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<script>
+		$(function(){
+			
+			//获取验证码
+			getCode();
+		});
+
+		//获取验证码
+		function getCode(){
+			var wait = 60;
+			function mbtime(o) {
+			   if (wait == 60  ) {
+			      //ajax发送短信
+			   }
+			   if (wait == 0) {
+			      o.val('重发验证码').attr('disabled',false).removeClass('disabled');
+			      wait = 60;
+			   } else {
+			      o.attr('disabled',true).val('剩余(' + wait + ")秒").addClass('disabled');
+			      wait--;
+			      setTimeout(function() {mbtime(o)},1000);
+			   }
+			}
+			$('.btn-code').click(function(event) {
+				$(".m-popCode").show();
+			   	// mbtime($(this));
+			   	return false;
+			});
+			$(".m-codeBox .btns .sub").click(function(event) {
+				var that=$(this);
+				var codeBox=that.parents(".m-codeBox");
+				var inp_val=codeBox.find(".con .inp").val();
+				if(inp_val==""){
+					return false;
+				}else{
+					that.parents(".m-popBox1").hide();
+					mbtime($(".btn-code"));
+				}
+			});
+			$(".m-codeBox .btns .cancel").click(function(event) {
+				var that=$(this);
+				var codeBox=that.parents(".m-codeBox");
+				var inp=codeBox.find(".con .inp");
+				that.parents(".m-popBox1").hide();
+				inp.val("");
+			});
+		}
+	</script>
+	
 	
     <script>
+	
 		//获取上传营业执照上传按钮
 		var input = document.getElementById("js-head"); 
 		
@@ -109,7 +183,7 @@
 				};  
 			}
 		};
-		
+				
 	</script>
 	
 	
