@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>线下自提</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+    <script type="text/javascript" src="js/dq.js"></script>
+</head>
+<body class="gray">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<img src="images/icon1.png"/>
+    </div>
+     
+
+    <section class="g-bd1 padd">
+     <ul data-role="controlgroup" id="select_p_c_a" data-ajax="false" class="m-list">  
+        <li><select id="select_province" class="sel3"></select></li>
+        <li><select id="select_city" class="sel3"></select></li>  
+        <li><select id="select_area" class="sel3"></select> </li> 
+     </ul>
+	</section>
+    <section class="g-bd1">
+    
+  		<ul class="m-eval m-eval2">
+        	<li>
+				<span class="tit"></i>店名</span>
+				<div class="con">
+					<p class="inp inp1">*************</p>
+				</div>
+			</li>
+   			<li>
+				<span class="tit">收件地址</span>
+				<div class="con">
+					<p class="inp inp1">河南省郑州市中原区</p>
+				</div>
+			</li>
+		</ul> 
+	</section>
+    <section class="g-bd1">
+  		<ul class="m-eval m-eval2">
+        	<li>
+				<span class="tit"></i>店名</span>
+				<div class="con">
+					<p class="inp inp1">*************</p>
+				</div>
+			</li>
+   			<li>
+				<span class="tit">收件地址</span>
+				<div class="con">
+					<p class="inp inp1">河南省郑州市中原区</p>
+				</div>
+			</li>
+		</ul> 
+	</section>
+    
+	 <div class="title cen">
+          <h1>线下自提</h1>
+         <img src="images/icon4.png"/>
+     </div>
+      <script>  
+    	region_init("select_province","select_city","select_area");
+	</script> 
+   <!-- <script type="text/javascript">
+	var ProvinceObj = document.getElementById("ddlProvince");  
+	var CityObj = document.getElementById("ddlCity");  
+	var DistrictObj = document.getElementById("ddlDistrict");  
+	var ProvinceStr = "请选择,北京市,天津市,上海市,重庆市,河北省,河南省,云南省,辽宁省,黑龙江省,湖南省,安徽省,山东省,新疆维吾尔,江苏省,浙江省,江西省,湖北省,广西壮族,甘肃省,山西省,内蒙古,陕西省,吉林省,福建省,贵州省,广东省,青海省,西藏,四川省,宁夏回族,海南省,台湾省,香港,澳门";  
+	//初始化地区下拉菜单  
+	function initialize()  
+	{     
+		var ProvinceArray = ProvinceStr.split(',');  
+		for(var j=0; j<ProvinceArray.length; j++)  
+		{  
+			ProvinceObj.add(new Option(ProvinceArray[j],ProvinceArray[j]));  
+		}  
+	   CityDel();  
+	}  
+	  
+	//下拉列表改变事件  
+	function ProvinceSelChange()  
+	{  
+	   CityDel();  
+		CityAdd();  
+	}  
+	//下拉列表改变事件  
+	function CitySelChange()  
+	{  
+		DistrictDel();  
+		DistrictAdd();  
+	}  
+	  
+	//清空  
+	function CityDel()  
+	{  
+		CityObj.length = 0;  
+		CityObj.add(new Option('请选择', '请选择'));  
+	   DistrictDel();  
+	}  
+	//清空  
+	function DistrictDel()  
+	{  
+		DistrictObj.length = 0;  
+		DistrictObj.add(new Option('请选择', '请选择'));  
+	}  
+	  
+	//添加市  
+	function CityAdd()  
+	{     
+		var CityList = [];  
+		CityList[0]=(["河南省","郑州,洛阳,周口"]);  
+		CityList[1]=(["",""]);  
+		CityList.sort();  
+		for(var i=0; i<CityList.length; i++)  
+		{  
+			if(ProvinceObj.value == CityList[i][0])  
+			{  
+				var City = CityList[i][1];  
+				AddOne(City, CityObj);  
+			}  
+		}  
+	}  
+			  
+	//添加区  
+	function DistrictAdd()  
+	{     
+		var DistrictList = [];  
+		DistrictList[0]=(["郑州","经开区,惠济区,高新区,中原区"]);  
+		 
+		DistrictList[1]=(["",""]);  
+		DistrictList.sort();  
+		for(var i=0; i<DistrictList.length; i++)  
+		{  
+			if(CityObj.value == DistrictList[i][0])  
+			{  
+				var District = DistrictList[i][1];  
+				AddOne(District, DistrictObj)  
+			}  
+		}  
+	}  
+	
+	//添加实现  
+	function AddOne(Str, Obj)  
+	{  
+		if(Str == "")  
+			return;  
+		var strArray = Str.split(',');  
+		for(var j=0; j<strArray.length; j++)  
+		{  
+			Obj.add(new Option(strArray[j], strArray[j]))  
+		}  
+	}  
+	
+</script>-->
+</body>
+</html>

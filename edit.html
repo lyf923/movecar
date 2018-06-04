@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>编辑资料</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+    <script src="js/jquery.js"></script>
+	
+</head>
+<body class="gray">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<img src="images/icon1.png"/>
+    </div>
+	<section class="g-bd1">
+  	<ul class="m-eval">
+        <div class="con4 cen">
+            <canvas id="cvs" style="width:2rem; height:2rem; border-radius:1rem; background:url(images/icon5.png) no-repeat center"></canvas>
+            <span class="btn upload">上传头像<input type="file" class="upload_pic" id="js-head" /></span>
+        </div>
+			<li>
+				<span class="tit">昵称</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="旺旺">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>姓名</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="刘**">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>联系方式</span>
+				<div class="con con1 con2">
+					<input type="text" class="inp inp1" placeholder="15635566985">
+					<input type="button" class="btn-code" value="获取验证码">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>验证码</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请输入验证码">
+				</div>
+			</li>
+            
+		</ul>
+	</section>
+	 <div class="title cen">
+          <h1>编辑资料</h1>
+         <img src="images/icon4.png"/>
+        
+     </div>
+    
+      <p class="cen button">提交</p>
+       <div style=" height:1rem;"></div>
+	
+    <script>
+		//获取上传营业执照上传按钮
+		var input = document.getElementById("js-head"); 
+		
+		if(typeof FileReader==='undefined'){ 
+			
+			 input.setAttribute('disabled','disabled'); 
+		}else{ 
+			 input.addEventListener('change',readFile,false); 
+			
+		}
+		
+		function readFile(){ 
+			var file = this.files[0];//获取上传文件列表中第一个文件
+			if(!/image\/\w+/.test(file.type)){
+			//图片文件的type值为image/png或image/jpg
+				alert("文件必须为图片！");
+				return false; 
+			} 
+			// console.log(file);
+			var reader = new FileReader();//实例一个文件对象
+			reader.readAsDataURL(file);//把上传的文件转换成url
+			//当文件读取成功便可以调取上传的接口
+			reader.onload = function(e){ 
+				
+				var image = new Image();
+				// 设置src属性 
+				image.src = e.target.result;
+				var max=200;
+				// 绑定load事件处理器，加载完成后执行，避免同步问题
+				image.onload = function(){ 
+					// 获取 canvas DOM 对象 
+					var canvas = document.getElementById("cvs"); 
+					// 获取 canvas的 2d 环境对象, 
+					var ctx = canvas.getContext("2d"); 
+					// canvas清屏 
+					ctx.clearRect(0, 0, canvas.width, canvas.height); 
+					
+					// ctx.drawImage(image, 0, 0, image.width, image.height);
+					ctx.drawImage(image, 0, 0, 300, 200);
+					// 注意，此时image没有加入到dom之中
+				};  
+			}
+		};
+		
+	</script>
+	
+	
+</body>
+</html>
