@@ -17,6 +17,11 @@
     
 </head>
 <body class="blue">
+
+  <input id="timestamp" type="hidden" value="1449132293" />
+    <input id="noncestr" type="hidden" value="fb4eaa58-6d53-40a8-a8fa-7033e9768a8a" />
+    <input id="signature" type="hidden" value="7ad32da3f82cb36492de935a60727d3053d33f4b" />
+
 	<!-- 头部 -->
 	<header class="g-header3">
 		<h1>挪车</h1>
@@ -38,7 +43,7 @@
 	<section class="g-bd cen">
     	<ul>
         	<li>
-            <a onclick="qwe()">
+            <a id="scanQRCode">
         		<img src="images/index-1.png"/>
                 <p>扫一扫</p>
                 </a>
@@ -75,16 +80,89 @@
 				lazyLoad : 'ondemand'
 			});
 		}
+	
 		
-		
+	</script>
+    <script>
+		var ua = navigator.userAgent.toLowerCase();  
+            var isWeixin = ua.indexOf('micromessenger') != -1;  
+            var isAndroid = ua.indexOf('android') != -1;  
+            var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);  
+            if (!isWeixin) {  
+                document.head.innerHTML = '<title>抱歉，出错了</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">'
+                document.body.innerHTML = '<div class="weui_msg"><div class="weui_icon_area"><i class="weui_icon_info weui_icon_msg"></i></div><div class="weui_text_area"><h1 class="weui_msg_title">暂不支持其它浏览器，请在微信客户端打开</h1></div></div>';  
+            }  
+	// function qwe(){
+	//		wx.config({
+	//			debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	//			appId: '', // 必填，公众号的唯一标识
+	//			timestamp: , // 必填，生成签名的时间戳
+	//			nonceStr: '', // 必填，生成签名的随机串
+	//			signature: '',// 必填，签名，见附录1
+	//			jsApiList: ['scanQRCode'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+	//		});
+	//		wx.scanQRCode({
+	//		needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+	//		scanType: ["qrCode","barCode"] // 可以指定扫二维码还是一维码，默认二者都有
+			
+	//		});
+	//	}
+		 
+        $(function() {
+            var timestamp = $("#timestamp").val();//时间戳
+            var nonceStr = $("#noncestr").val();//随机串
+            var signature = $("#signature").val();//签名
+            wx.config({
+                debug : true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId : 'wx622ca8545e5c354b', // 必填，公众号的唯一标识
+                timestamp : timestamp, // 必填，生成签名的时间戳
+                nonceStr : nonceStr, // 必填，生成签名的随机串
+                signature : signature,// 必填，签名，见附录1
+                jsApiList : [ 'scanQRCode' ]
+            // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+        });
+
+   $("#scanQRCode").click(function() {
+            wx.scanQRCode({
+                // 默认为0，扫描结果由微信处理，1则直接返回扫描结果
+                needResult : 1,
+                desc : 'scanQRCode desc',
+                success : function(res) {
+                    //扫码后获取结果参数赋值给Input
+                    var url = res.resultStr;
+                    //商品条形码，取","后面的
+                    if(url.indexOf(",")>=0){
+                        var tempArray = url.split(',');
+                        var tempNum = tempArray[1];
+                        $("#id_securityCode_input").val(tempNum);
+                    }else{
+                        $("#id_securityCode_input").val(url);
+                    }
+                }
+            });
+        });
+
+
+    </script>
+	</script>
+</body>
+</html>
+<!--
+		wx.config({
+				debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				appId: '', // 必填，公众号的唯一标识
+				timestamp: , // 必填，生成签名的时间戳
+				nonceStr: '', // 必填，生成签名的随机串
+				signature: '',// 必填，签名，见附录1
+				jsApiList: ['scanQRCode'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			});
 		function qwe(){
+			
 			wx.scanQRCode({
 			needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
 			scanType: ["qrCode","barCode"] // 可以指定扫二维码还是一维码，默认二者都有
 			
 			});
 		}
-		
-	</script>
-</body>
-</html>
+        -->
