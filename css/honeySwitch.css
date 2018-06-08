@@ -12,7 +12,7 @@
 	border-radius:.4rem;
 	box-shadow: white 0px 0px 0px 16px inset;
 	transition: border 0.4s, box-shadow 0.2s, background-color 1.2s;
-	background-color: white;
+	background-color:rgb(255, 255, 255);
 	cursor: pointer;
 	width:.8rem;
     height: .4rem;

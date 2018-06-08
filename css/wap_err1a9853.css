@@ -1,0 +1,49 @@
+body{line-height:1.6;font-family:"Helvetica Neue",Helvetica,"Microsoft YaHei",Arial,Tahoma,sans-serif;}
+body,h1,h2,h3,h4{margin:0;}
+a img{border:0;}
+body{
+    background-color: #fff;
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon67_status.warn {
+    background-position: 0 -204px;
+}
+.icon80_smile{
+    width:5rem;
+    height:5rem;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(../images/icon80_smile3696b4.png) no-repeat 0 0;
+}
+.page_msg {
+    padding:.6rem 0;
+   
+    font-size: .24rem;
+    text-align: center;
+}
+.page_msg .inner {
+    padding: .4rem 0;
+}
+.page_msg .msg_icon_wrp {
+    display: block;
+    padding-bottom:.5rem;
+}
+.page_msg .msg_content h4 {
+    font-weight: 400;
+    color: #000000;
+}
+.page_msg .msg_content p {
+    color: #90908E;
+}
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+  
+    .icon80_smile{
+        background-image: url(../images/icon80_smile.2x3696b4.png);
+        background-size:5rem;
+        -webkit-background-size:5rem;
+    }
+}
