@@ -141,8 +141,8 @@ p,h1,h2,h3,h4{ letter-spacing:.03rem; font-size:.24rem; }
 .g-bd1{padding: .9rem 0 1rem;background: #f7f7f7; margin:.24rem; background:#FFF; padding:.24rem; border-radius:.16rem; margin-top:.6rem;}
 .m-eval{ padding-top:1rem; font-size:.24rem; letter-spacing:.03rem;}
 .m-eval1{  font-size:.24rem; letter-spacing:.03rem;}
-.m-eval li,.m-eval1 li{overflow: hidden;height: .88rem;line-height: .88rem;border-bottom:.01rem solid #e5e5e5;}
-.m-eval li .tit,.m-eval1 li .tit{float: left;padding: 0 .13rem;font-size: .24rem; width:1.6rem;}
+.m-eval li,.m-eval1 li{overflow: hidden;border-bottom:.01rem solid #e5e5e5;}
+.m-eval li .tit,.m-eval1 li .tit{float: left;padding: 0 .13rem;font-size: .24rem; width:1.6rem; padding:.26rem .12rem}
 .m-eval .tit i,.m-eval1 .tit i{display: inline-block;vertical-align: middle;margin-top: -.05rem;margin-right: .11rem;width: .28rem;height: .28rem;background-position: center center;
 background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-size: .28rem .28rem;}
 
