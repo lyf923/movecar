@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="css/cui.css" />
 	<link rel="stylesheet" href="css/movecar.css" />
     <link rel="stylesheet" href="css/sel.css" />
-    
     <script src="js/jquery.js"></script>
 	
 </head>
@@ -27,7 +26,7 @@
 	<section class="g-bd1">
   	<ul class="m-eval">
         <div class="con4 cen">
-            <canvas id="cvs" style="width:2rem; height:2rem; border-radius:1rem; background:url(images/icon5.png) no-repeat center"></canvas>
+            <canvas id="cvs" style="width:2rem; height:2rem; border-radius:1rem; background:url(images/123.jpg) no-repeat center;background-size:2rem 2rem;"></canvas>
             <span class="btn upload">上传头像<input type="file" class="upload_pic" id="js-head" /></span>
         </div>
 			<li>
@@ -45,8 +44,8 @@
 			<li>
 				<span class="tit"></i>联系方式</span>
 				<div class="con con1 con2">
-					<input type="text" class="inp inp1" placeholder="15738865689">
-					<input type="button" class="btn-code" value="获取验证码">
+					<input type="text" class="inp inp1" placeholder="15763256895">
+					<input type="button" class="btn-code" value="获取验证码" onclick="settime(this)">
 				</div>
 			</li>
 			<li>
@@ -67,74 +66,26 @@
       <p class="cen button">提交</p>
        <div style=" height:1rem;"></div>
 
-
-	<!-- 验证码层 -->
-	<div class="m-popBox1 m-popCode">
-		<div class="bg"></div>
-		<div class="pop_con1">
-			<div class="m-codeBox">
-				<div class="con">
-					<input type="text" class="inp" placeholder="请输入验证码" maxlength="4">
-					<img src="images/img-code.png" alt="">
-				</div>
-				<ul class="btns">
-					<li><input type="button" class="btn sub" value="确定"></li>
-					<li><input type="button" class="btn cancel" value="取消"></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	
-	
-	
 	<script>
-		$(function(){
-			
-			//获取验证码
-			getCode();
-		});
-
+	
 		//获取验证码
-		function getCode(){
-			var wait = 60;
-			function mbtime(o) {
-			   if (wait == 60  ) {
-			      //ajax发送短信
-			   }
-			   if (wait == 0) {
-			      o.val('重发验证码').attr('disabled',false).removeClass('disabled');
-			      wait = 60;
-			   } else {
-			      o.attr('disabled',true).val('剩余(' + wait + ")秒").addClass('disabled');
-			      wait--;
-			      setTimeout(function() {mbtime(o)},1000);
-			   }
-			}
-			$('.btn-code').click(function(event) {
-				$(".m-popCode").show();
-			   	// mbtime($(this));
-			   	return false;
-			});
-			$(".m-codeBox .btns .sub").click(function(event) {
-				var that=$(this);
-				var codeBox=that.parents(".m-codeBox");
-				var inp_val=codeBox.find(".con .inp").val();
-				if(inp_val==""){
-					return false;
-				}else{
-					that.parents(".m-popBox1").hide();
-					mbtime($(".btn-code"));
-				}
-			});
-			$(".m-codeBox .btns .cancel").click(function(event) {
-				var that=$(this);
-				var codeBox=that.parents(".m-codeBox");
-				var inp=codeBox.find(".con .inp");
-				that.parents(".m-popBox1").hide();
-				inp.val("");
-			});
+		var countdown=60; 
+		function settime(obj) { 
+			if (countdown == 0) { 
+				obj.removeAttribute("disabled");    
+				obj.value="获取验证码"; 
+				countdown = 60; 
+				return;
+			} else { 
+				obj.setAttribute("disabled", true); 
+				obj.value="重新发送(" + countdown + ")"; 
+				countdown--; 
+			} 
+		setTimeout(function() { 
+			settime(obj) }
+			,1000) 
 		}
+
 	</script>
 	
 	
@@ -178,7 +129,7 @@
 					ctx.clearRect(0, 0, canvas.width, canvas.height); 
 					
 					// ctx.drawImage(image, 0, 0, image.width, image.height);
-					ctx.drawImage(image, 0, 0, 300, 200);
+					ctx.drawImage(image, 0, 0,300, 200);
 					// 注意，此时image没有加入到dom之中
 				};  
 			}
