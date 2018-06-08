@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>申请邮寄</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Expires" CONTENT="0"> 
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/jquery.Spinner.js"></script>
+   <script type="text/javascript" src="js/dq.js"></script>
+</head>
+<body class="gray">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<img src="images/icon1.png"/>
+    </div>
+	<section class="g-bd1">
+            <ul data-role="controlgroup" id="select_p_c_a" data-ajax="false" class="m-eval">
+			<li>
+				<span class="tit">收件人</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请输入收件人姓名">
+				</div>
+			</li>	
+			<li>
+				<span class="tit">联系方式</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请输入收件人的联系方式">
+				</div>
+			</li>
+            <li>
+                 <span class="tit">选择省份</span>
+                 <div class="con">                        
+                     <select id="select_province" class="sel11"></select>
+                 </div>
+            </li>
+            <li>
+                 <span class="tit">选择城市</span>
+                  <div class="con">                       
+                    <select id="select_city" class="sel11"></select>
+                  </div>
+                </li>
+            <li>
+				<span class="tit">选择区县</span>
+				<div class="con">					
+                   
+                    <select id="select_area" class="sel11"></select>
+				</div>
+			</li>
+			<li>
+				<span class="tit">详细地址</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请填写您的详细地址">
+				</div>
+			</li>
+		</ul>
+	</section>
+    <div class="kj">
+        <ul class="m-eval1">
+            <li>
+                <p>物品邮寄清单</p>
+            </li>
+            <li class="white">
+                <span class="tit"><i class="icon"></i>挪车卡</span>
+                <div class="con">
+                    <div id="b" class="Spinner"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+    	<p style=" padding:0 .24rem; margin-top:.6rem;">总价：<span class="blue-size">8元</span>（邮费：<span class="orange-size">8元</span>）</p>
+    	<p class="cen bottom button button1">立即申请</p>
+    </div>
+	 <div  style="clear:both;" class="title cen">
+          <h1>申请邮寄</h1>
+         <img src="images/icon4.png"/>
+     </div>
+     <script> 
+	  
+    	region_init("select_province","select_city","select_area");
+		$(function(){
+		$("#b").Spinner({value:1});
+		
+	});
+	</script> 
+ 
+
+</body>
+</html>

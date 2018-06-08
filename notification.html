@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>通知</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Expires" CONTENT="0"> 
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+    <script src="js/jquery.js"></script>
+	<script src="js/selCity.js"></script>
+</head>
+<body class="gray">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<img src="images/icon1.png"/>
+    </div>
+   
+	<section class="g-bd1">
+  <ul class="m-eval">			
+			
+			<li>
+				<span class="tit"></i>车牌号</span>
+				<div class="con">
+					<p>豫A88888</p>
+				</div>
+			</li>
+			<li>
+				<a href="sms:123456"><label><input type="radio" class="sel2" name="displaceType" checked="checked"  onClick="aaa()" >普通挪车</label></a>
+			</li>
+			<li>
+				<label><input type="radio" class="sel2" name="displaceType" checked="checked" onClick="bbb()">语音挪车</label>
+			</li>
+            
+		</ul>
+	</section>
+    <div id="move" style="display:block">
+     	<a href="telmove.html"><p  class="cen button">确定</p>
+     </div>
+	 <div class="title cen">
+          <h1>通知</h1>
+         <img src="images/icon4.png"/>
+        
+     </div>
+     
+	<footer class="g-nav1 cen">
+		<ul>
+			<li><a href="index.html"><i class="icon1"></i>首页</a></li>
+			<li class="on"><a href="eval.html"><i class="icon2"></i>我的</a></li>
+		</ul>
+	</footer>
+    <script>
+		function aaa(){
+			document.getElementById("move").style.display="none";
+		}
+		function bbb(){
+	document.getElementById("move").style.display="block";
+		}
+		 
+	 </script>
+	
+</body>
+</html>
