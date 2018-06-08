@@ -278,7 +278,7 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 .Spinner .DisIn i{background-position:0 0; }
  .DisDe i{background:url(../images/icon9.png) no-repeat; }
 .Increase i{ background:url(../images/icon10.png) no-repeat;}
-.sel11{ border:none; width:60%; margin-top:.28rem}
+.sel11{ border:none; width:60%; margin-top:.22rem}
 
 /*使用说明*/
 .page{ line-height:.48rem; text-align:left;}
