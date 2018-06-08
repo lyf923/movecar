@@ -198,7 +198,7 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 .int-eval li .con2{padding-right: 2.5rem;}
 .int-eval li:last-child {border-bottom:none;}
 .int-eval .con .inp{padding: 0 .18rem;}
-.int-eval .con .inp1{font-size: .24rem;text-align: left;    padding: .24rem 0;}
+.int-eval .con .inp1{font-size: .24rem;text-align: left;    padding: .12rem .12rem;}
 .int-eval .con .btn-code{position: absolute;top: .16rem;right: .34rem;display: block;width: 1.84rem;height: .52rem;background: #34adfc;border:none;border-radius: .1rem;font-size: .24rem;color: #fff;}
 .int-eval .con .btn-code:disabled{background: #999;}
 
