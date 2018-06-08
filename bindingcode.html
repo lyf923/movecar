@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定挪车码</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+    <link rel="stylesheet" href="css/sel.css" />
+    <script src="js/jquery.js"></script>
+	<script src="js/selCity.js"></script>
+</head>
+<body class="gray">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<img src="images/icon1.png"/>
+    </div>
+	<section class="g-bd1">
+  		<ul class="m-eval">			
+			<li>
+				<span class="tit">品牌</span>
+				<div class="con">
+					<input type="text" class="sel js-popBrandBox" readonly placeholder="请选择">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>车牌号</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请输入车牌号">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>联系方式</span>
+				<div class="con con1 con2">
+					<input type="text" class="inp inp1" placeholder="请输入联系方式">
+					<input type="button" class="btn-code" value="获取验证码" onclick="settime(this)">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>验证码</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请输入验证码">
+				</div>
+			</li>
+		</ul>
+	 </section>
+	 <div class="title cen">
+          <h1>绑定挪车码</h1>
+         <img src="images/icon4.png"/>
+     </div>
+     <p class="cen button">确定</p>
+	 
+	<!-- 品牌型号 -->
+	<div class="m-popBox m-selBrand">
+		<header class="g-header2">
+			<a href="javascript:void(0);" class="back"></a>
+			<h1>品牌</h1>
+		</header>
+		<section class="g-main">
+			<div class="m-bandBox">
+				<h3 id="jump-all">*</h3>
+				<ul class="ul-brandlist">
+					<li><a href="javascript:void(0);" class="js-all">不限品牌</a></li>
+				</ul>
+				<h3 id="jump-A">A</h3>
+				<ul class="ul-brandlist">
+					<li><a href="javascript:void(0);"><img src="images/img-logo1.jpg" alt="">奥迪</a></li>
+				</ul>
+				<h3 id="jump-B">B</h3>
+				<ul class="ul-brandlist">
+					<li><a href="javascript:void(0);"><img src="images/img-logo2.jpg" alt="">宝马</a></li>
+					<li><a href="javascript:void(0);"><img src="images/img-logo3.jpg" alt="">奔驰</a></li>
+					<li><a href="javascript:void(0);"><img src="images/img-logo6.jpg" alt="">本田</a></li>
+					<li><a href="javascript:void(0);"><img src="images/img-logo8.jpg" alt="">比亚迪</a></li>
+				</ul>
+				<h3 id="jump-D">D</h3>
+				<ul class="ul-brandlist">
+					<li><a href="javascript:void(0);"><img src="images/img-logo5.jpg" alt="">大众</a></li>
+				</ul>
+				<h3 id="jump-L">L</h3>
+				<ul class="ul-brandlist">
+					<li><a href="javascript:void(0);"><img src="images/img-logo4.jpg" alt="">路虎</a></li>
+				</ul>
+				<h3 id="jump-W">W</h3>
+				<ul class="ul-brandlist">
+					<li><a href="javascript:void(0);"><img src="images/img-logo7.jpg" alt="">五菱</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- 右侧标签栏 -->
+		<div class="m-tagBox js-tagTab">
+			<ul>
+				<li data-id="jump-all">*</li>
+				<li data-id="jump-A">A</li>
+				<li data-id="jump-B">B</li>
+				<li data-id="jump-D">D</li>
+				<li data-id="jump-L">L</li>
+				<li data-id="jump-W">W</li>
+			</ul>
+		</div>
+		<!-- 点击放大提示框 -->
+		<div class="m-tips"></div>
+	</div>
+
+	<!-- 选择型号弹出层 -->
+	<div class="m-popBox m-selModel">
+		<header class="g-header2">
+			<a href="javascript:void(0);" class="back"></a>
+			<h1>奥迪</h1>
+		</header>
+		<section class="g-main">
+			<ul class="ul-modellist">
+				<li class="js-all"><a href="javascript:void(0);"><span class="name">全部车系</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A1</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A3</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪RS3</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A3（进口）</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A3（新能源进口）</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪S3</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A4</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A5</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A6</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A6L</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪200</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪S6</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪S7</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A7</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪A8</span></a></li>
+				<li><a href="javascript:void(0);"><span class="btn">车型</span><span class="name">奥迪S8</span></a></li>
+			</ul>
+		</section>
+	</div>
+
+	<!-- 选择车型弹出层 -->
+	<div class="m-popBox m-selCarModels">
+		<header class="g-header2">
+			<a href="javascript:void(0);" class="back"></a>
+			<h1>车型</h1>
+		</header>
+		<section class="g-main g-main1">
+			<dl class="m-carBox m-carBox1">
+				<dt><span class="btn"></span><a href="javascript:void(0);">2016款全部</a></dt>
+				<dd>
+					<ul class="ul-carlist">
+						<li><a href="javascript:void(0);">2016款 30 TFSI Sportback S Line运动版</a></li>
+						<li><a href="javascript:void(0);">2016款 30 TFSI Sportback Design风尚版</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="m-carBox m-carBox1">
+				<dt><span class="btn"></span><a href="javascript:void(0);">2015款全部</a></dt>
+				<dd>
+					<ul class="ul-carlist">
+						<li><a href="javascript:void(0);">2015款 30 TFSI Sportback S Line运动版</a></li>
+						<li><a href="javascript:void(0);">2015款 30 TFSI Sportback Design风尚版</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="m-carBox m-carBox1">
+				<dt><span class="btn"></span><a href="javascript:void(0);">2014款全部</a></dt>
+				<dd>
+					<ul class="ul-carlist">
+						<li><a href="javascript:void(0);">2014款 30 TFSI Sportback S Line运动版</a></li>
+						<li><a href="javascript:void(0);">2014款 30 TFSI Sportback Design风尚版</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="m-carBox m-carBox1">
+				<dt><span class="btn"></span><a href="javascript:void(0);">2014款全部</a></dt>
+				<dd>
+					<ul class="ul-carlist">
+						<li><a href="javascript:void(0);">2014款 30 TFSI Sportback S Line运动版</a></li>
+						<li><a href="javascript:void(0);">2014款 30 TFSI Sportback Design风尚版</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$(function(){
+			//弹出品牌型号
+			popBrandBox($(".js-popBrandBox"));
+			popBrandBox($(".js-popBrandBox1"));
+			//弹出型号
+			popModelBox();
+			//弹出车型
+			popCarModel();
+			//点击折叠车型
+			toggleModelArea();
+			//品牌选择后赋值
+			selBrandModel();
+			//车型选择后赋值
+			selCarModels();
+			
+		});
+		
+		//弹出品牌型号
+		function popBrandBox(obj){
+			obj.focus(function(event) {
+				obj.blur();
+			});
+			obj.click(function(){
+				var that=$(this);
+				var selBrandBox=$(".m-selBrand");
+				if(that.hasClass("js-popBrandBox")){
+					selBrandBox.attr("data-id","1");
+					$(".ul-modellist").attr("data-id","1");
+					$(".m-selCarModels").attr("data-id","1");
+				}else{
+					selBrandBox.attr("data-id","2");
+					$(".ul-modellist").attr("data-id","2");
+					$(".m-selCarModels").attr("data-id","2");
+				}
+				$("body").addClass("ovh");
+				selBrandBox.css("transform","translate3d(0, 0px, 0px)");
+			});
+		}
+		//弹出型号
+		function popModelBox(){
+			$(".m-selBrand .ul-brandlist a").click(function(){
+				//根据选择品牌名字，请求型号数据并赋值，然后再将其显示
+				var that=$(this);
+				if(that.hasClass('js-all')){
+					var dataId=that.parents(".m-selBrand").attr("data-id");
+					var brandName=that.text();
+					if(dataId=="1"){
+						$(".js-popBrandBox").val(brandName);
+					}else{
+						$(".js-popBrandBox1").val(brandName);
+					}
+					closePop(that);
+				}else{
+					$(".m-selModel").css("transform","translate3d(0, 0px, 0px)");
+					setTimeout(function(){
+						that.parents(".m-popBox").css("transform","translate3d(100%, 0px, 0px)");
+					},500);
+				}
+			});
+		}
+		//品牌选择后赋值
+		function selBrandModel(){
+			$(".ul-modellist li .name").click(function(){
+				var that=$(this);
+				var modelName;
+				if(that.parents().hasClass('js-all')){
+					modelName=that.parents(".m-selModel").find("h1").text();
+				}else{
+					modelName=that.text();
+				}
+				var dataId=that.parents(".ul-modellist").attr("data-id");
+				if(dataId=="1"){
+					$(".js-popBrandBox").val(modelName);
+				}else{
+					$(".js-popBrandBox1").val(modelName);
+				}
+				closePop(that);
+			});
+		}
+		//弹出车型
+		function popCarModel(){
+			$(".ul-modellist li .btn").click(function(){
+				var that=$(this);
+				var modelName=that.next(".name").text();
+				$(".m-selCarModels").attr("data-name",modelName).css("transform","translate3d(0, 0px, 0px)");
+				setTimeout(function(){
+					that.parents(".m-popBox").css("transform","translate3d(100%, 0px, 0px)");
+				},500);
+			});
+		}
+		//点击折叠车型
+		function toggleModelArea(){
+			$(".m-carBox dt .btn").click(function(){
+				var that=$(this);
+				if(!that.hasClass("active")){
+					that.addClass("active");
+					that.parents(".m-carBox").find("dd").hide();
+				}else{
+					that.removeClass("active");
+					that.parents(".m-carBox").find("dd").show();
+				}
+			});
+		}
+		//车型选择
+		function selCarModels(){
+			$(".ul-carlist li a").click(function(event) {
+				var that=$(this);
+				var modelsName=that.text();
+				var modelName=that.parents(".m-popBox").attr("data-name");
+				var dataId=that.parents(".m-selCarModels").attr("data-id");
+				if(dataId=="1"){
+					$(".js-popBrandBox").val(modelName+modelsName);
+				}else{
+					$(".js-popBrandBox1").val(modelName+modelsName);
+				}
+				closePop(that);
+			});
+		}
+		
+		//获取验证码
+		var countdown=60; 
+		function settime(obj) { 
+			if (countdown == 0) { 
+				obj.removeAttribute("disabled");    
+				obj.value="获取验证码"; 
+				countdown = 60; 
+				return;
+			} else { 
+				obj.setAttribute("disabled", true); 
+				obj.value="重新发送(" + countdown + ")"; 
+				countdown--; 
+			} 
+		setTimeout(function() { 
+			settime(obj) }
+			,1000) 
+		}
+
+	</script>
+	
+</body>
+</html>

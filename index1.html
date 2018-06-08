@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>挪车</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+</head>
+<body class="blue">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<p class="yellow cen">一车一码 ● 隐私保护</p>
+    </div>
+    <div class="banner">
+    	<div class="item">
+    		<img src="images/index-banner.jpg"/>
+       </div>
+       <div class="item">
+    		<img src="images/index-banner.jpg"/>
+       </div>
+       <div class="item">
+    		<img src="images/index-banner.jpg"/>
+       </div>
+    </div>
+	<section class="g-bd cen">
+    	<ul>
+        	<li>
+            <a onclick="qwe()" id="id="scanQRCode"">
+        		<img src="images/index-1.png"/>
+                <p>扫一扫</p>
+                </a>
+            </li>
+            <a href="carmove.html"><li>
+        		<img src="images/index-2.png"/>
+                <p>车牌号挪车</p>
+            </li>
+            </a>
+		</ul>
+        <a href="mail.html"><h1 class="blue1 cen">申请邮寄</h1></a>
+         <a href="offline.html"><h1 class="blue1">线下自提</h1></a>
+         <div style="height:1.4rem;"></div>
+	</section>
+	<footer class="g-nav1 cen">
+		<ul>
+			<li  class="on"><a href="index.html"><i class="icon1"></i>首页</a></li>
+			<li><a href="my.html"><i class="icon2"></i>我的</a></li>
+		</ul>
+	</footer>
+    <script>
+		$(function(){
+			bannerSlide();
+			
+		});
+		//banner轮播
+		function bannerSlide(){
+		
+			$(".banner").slick({
+				dots:true,
+				arrows:false,
+				autoplay:true,
+				autoplaySpeed:3000,
+				lazyLoad : 'ondemand'
+			});
+		}
+	
+		
+	</script>
+    <script>
+		var ua = navigator.userAgent.toLowerCase();  
+            var isWeixin = ua.indexOf('micromessenger') != -1;  
+            var isAndroid = ua.indexOf('android') != -1;  
+            var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);  
+            if (!isWeixin) {  
+                document.head.innerHTML = '<title>抱歉，出错了</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">'
+                document.body.innerHTML = '<div class="weui_msg"><div class="weui_icon_area"><i class="weui_icon_info weui_icon_msg"></i></div><div class="weui_text_area"><h1 class="weui_msg_title">暂不支持其它浏览器，请在微信客户端打开</h1></div></div>';  
+            } 
+			 $.ajax({
+				type:"post",
+				url:"",//自己填写请求地址
+				data:{},
+				success:function(result){
+					wx.config({
+					// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+					debug: false,
+					// 必填，公众号的唯一标识
+					appId: result.appId,
+					// 必填，生成签名的时间戳
+					timestamp:""+result.timestamp,
+					// 必填，生成签名的随机串
+					nonceStr:result.noncestr,
+					 // 必填，签名，见附录1
+					 signature:result.signature,
+					 // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+					 jsApiList : [ 'checkJsApi', 'scanQRCode' ]
+					 });
+				  }
+			})
+		
+			wx.error(function(res) {
+				alert("出错了：" + res.errMsg);//这个地方的好处就是wx.config配置错误，会弹出窗口哪里错误，然后根据微信文档查询即可。
+			});
+		
+			wx.ready(function() {
+				wx.checkJsApi({
+					 jsApiList : ['scanQRCode'],
+					 success : function(res) {
+		
+					 }
+				});
+		
+				//点击按钮扫描二维码
+				document.querySelector('#scanQRCode').onclick = function() {
+					wx.scanQRCode({
+						needResult : 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+						scanType : [ "qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
+						success : function(res) {
+						var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+						 window.location.href = result;//因为我这边是扫描后有个链接，然后跳转到该页面
+						}
+					});
+				};
+		
+			}); 
+		
+	</script>
+</body>
+</html>
