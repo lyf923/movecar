@@ -198,8 +198,8 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 .int-eval li .con2{padding-right: 2.5rem;}
 .int-eval li:last-child {border-bottom:none;}
 .int-eval .con .inp{padding: 0 .18rem;}
-.int-eval .con .inp1{font-size: .24rem;text-align: left;    padding: .12rem .12rem;}
-.int-eval .con .btn-code{position: absolute;top: .16rem;right: .34rem;display: block;width: 1.84rem;height: .52rem;background: #34adfc;border:none;border-radius: .1rem;font-size: .24rem;color: #fff;}
+.int-eval .con .inp1{font-size: .24rem;text-align: left; }
+.int-eval .con .btn-code{position: absolute;right: .45rem;display: block;width: 1.84rem;height: .52rem;background: #34adfc;border:none;border-radius: .1rem;font-size: .24rem;color: #fff; margin-top:.2rem;}
 .int-eval .con .btn-code:disabled{background: #999;}
 
 
@@ -278,7 +278,7 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 .Spinner .DisIn i{background-position:0 0; }
  .DisDe i{background:url(../images/icon9.png) no-repeat; }
 .Increase i{ background:url(../images/icon10.png) no-repeat;}
-.sel11{ border:none; width:60%; padding:.24rem 0;}
+.sel11{ border:none; width:60%; padding:.22rem 0;}
 
 /*使用说明*/
 .page{ line-height:.48rem; text-align:left;}
