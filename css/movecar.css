@@ -157,12 +157,12 @@ p,h1,h2,h3,h4{ letter-spacing:.03rem; font-size:.24rem; }
 .m-eval{ padding-top:1rem; font-size:.24rem; letter-spacing:.03rem;}
 .m-eval1{  font-size:.24rem; letter-spacing:.03rem;}
 .m-eval li,.m-eval1 li{overflow: hidden;border-bottom:.01rem solid #e5e5e5;}
-.m-eval li .tit,.m-eval1 li .tit{float: left;padding: 0 .13rem;font-size: .24rem; width:1.6rem; padding-top:.2rem;}
+.m-eval li .tit,.m-eval1 li .tit{float: left;padding: 0 .13rem;font-size: .24rem; width:1.6rem; padding:.24rem 0;}
 .m-eval .tit i,.m-eval1 .tit i{display: inline-block;vertical-align: middle;margin-top: -.05rem;margin-right: .11rem;width: .28rem;height: .28rem;background-position: center center;
 background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-size: .28rem .28rem;}
 
 .m-eval li .con,.m-eval1 li .con{overflow: hidden;}
-.m-eval .con .sel,.m-eval .con .inp{display: block;width: 100%; padding-top:.24rem;border:none;font-size: .24rem;text-align: right;}
+.m-eval .con .sel,.m-eval .con .inp{display: block;width: 100%; padding:.24rem 0;border:none;font-size: .24rem;text-align: right;}
 .m-eval .con .sel{padding-right: .48rem;background: url(../images/icon3.png) no-repeat right .18rem center;
     -webkit-background-size: .16rem .28rem;
     background-size: .16rem .28rem;
