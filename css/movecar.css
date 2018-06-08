@@ -187,8 +187,7 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 .int-eval .tit i,{display: inline-block;vertical-align: middle;margin-top: -.05rem;margin-right: .11rem;width: .28rem;height: .28rem;background-position: center center;
 background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-size: .28rem .28rem;}
 
-.int-eval li .con,{overflow: hidden;}
-.int-eval .con .sel{display: block;width: 100%; height:.88rem; padding:.24em 0;border:none;font-size: .24rem;text-align: right;}
+.int-eval li .con,{display: block;width: 100%; height:.88rem; padding:.24em 0;border:none;font-size: .24rem;text-align: right;}
 .int-eval .con .sel{padding-right: .48rem;background: url(../images/icon3.png) no-repeat right .18rem center;
     -webkit-background-size: .16rem .28rem;
     background-size: .16rem .28rem;
