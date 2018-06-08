@@ -157,7 +157,8 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 .m-eval li .con2{padding-right: 2.5rem;}
 .m-eval li:last-child {border-bottom:none;}
 .m-eval .con .inp{padding: 0 .18rem;}
-.m-eval .con .inp1{font-size: .24rem;text-align: left;}
+.m-eval .con .inp1{font-size: .24rem;text-align: left;height: .6rem;
+    padding: .4rem 0;}
 .m-eval .con .btn-code{position: absolute;top: .16rem;right: .34rem;display: block;width: 1.84rem;height: .52rem;background: #34adfc;border:none;border-radius: .1rem;font-size: .24rem;color: #fff;}
 .m-eval .con .btn-code:disabled{background: #999;}
 
