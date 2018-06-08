@@ -182,14 +182,13 @@ background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-s
 
 /*输入框光标*/
 .int-eval{ padding-top:1rem; font-size:.24rem; letter-spacing:.03rem;}
-.int-eval1{  font-size:.24rem; letter-spacing:.03rem;}
 .int-eval li{overflow: hidden;border-bottom:.01rem solid #e5e5e5;height:.84rem}
 .int-eval li .tit{float: left;padding: 0 .13rem;font-size: .24rem; width:1.6rem; height:.88rem;padding:.24rem 0;}
 .int-eval .tit i,{display: inline-block;vertical-align: middle;margin-top: -.05rem;margin-right: .11rem;width: .28rem;height: .28rem;background-position: center center;
 background-repeat: no-repeat;-webkit-background-size: .28rem .28rem;background-size: .28rem .28rem;}
 
 .int-eval li .con,{overflow: hidden;}
-.int-eval .con .sel{display: block;width: 100%; height:.88rem; padding:.4em 0;border:none;font-size: .24rem;text-align: right;}
+.int-eval .con .sel{display: block;width: 100%; height:.88rem; padding:.24em 0;border:none;font-size: .24rem;text-align: right;}
 .int-eval .con .sel{padding-right: .48rem;background: url(../images/icon3.png) no-repeat right .18rem center;
     -webkit-background-size: .16rem .28rem;
     background-size: .16rem .28rem;
