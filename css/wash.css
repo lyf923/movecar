@@ -39,8 +39,8 @@ article .rmb .buy{ background:#34adfc; color:#fff;}
 /*订单列表*/
 .order{ margin-top:1.2rem;}
 .order-list{ color:#333; letter-spacing:.03rem; margin:0 .24rem; margin-top:.24rem; border-radius:.12rem;}
-.order-list{border:#34adfc solid .01rem;}
-.order-list li:first-child{ border-bottom:#34adfc solid .01rem;background: #c0e2f9;}
+.order-list{border:#efebef solid .01rem;}
+.order-list li:first-child{ border-bottom:#efebef solid .01rem;}
 .order-list li{ line-height:.58rem; }
 .order-list .pay-left{ text-align:left; padding-left:.24rem;}
 .order-list .pay-right{float:right; padding-right:.24rem;}
