@@ -15,4 +15,15 @@ article .rmb .buy{ background:#34adfc; color:#fff;}
 .wash-service li .wash-name{ font-size:.28rem;font-weight:600;}
 .wash-service li .wash-weight{font-weight:600; padding-right:.24rem;}
 .wash-service li .wash-gray{color:#666;} 
+.font-blue1{
+    color: #34adfc;
+    width: 70%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    left: .24rem;
+    text-align: left;
+}
 
