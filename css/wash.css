@@ -38,7 +38,7 @@ article .rmb .buy{ background:#34adfc; color:#fff;}
 .btn-style{ background:#34adfc; color:#fff; text-align:center; border-radius:.08rem; margin:.68rem .24rem; line-height:.78rem;}
 /*订单列表*/
 .order{ margin-top:1.2rem;}
-.order-list{ color:#333; letter-spacing:.03rem; margin:0 .24rem; margin-top:.24rem; border-radius:.12rem;}
+.order-list{ color:#333;     background: #fff;letter-spacing:.03rem; margin:0 .24rem; margin-top:.24rem; border-radius:.12rem;}
 .order-list{border:#efebef solid .01rem;}
 .order-list li:first-child{ border-bottom:#efebef solid .01rem;}
 .order-list li{ line-height:.58rem; }
