@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+.g-header1 { padding: .12rem .24rem 0 .24rem;}
+article h1{ background:#efebef; line-height:.72rem; height:.72rem; text-align:center;}
+article .wash{ margin-bottom:.72rem;}
+article .wash .wash-left{ text-align:left;padding-left:.24rem;}
+article .wash .wash-right{float:right;padding-right:.24rem;}
+article .wash li{ line-height:.72rem; height:.72rem; border-bottom:#efebef solid .01rem;}
+article .rmb{position: fixed;    bottom: 1.18rem;;    left: 0;    right: 0;    z-index: 999;}
+article .rmb li{ display:inline; width:50%; text-align:center; line-height:.72rem; height:.72rem; float:left;}
+article .rmb .price{ background:#efebef; color:#34adfc;}
+article .rmb .buy{ background:#34adfc; color:#fff;}
+.wash-service{ padding:.24rem 0;}
+.wash-service li{ line-height:.48rem;}
+.wash-service li .wash-name{ font-size:.28rem;font-weight:600;}
+.wash-service li .wash-weight{font-weight:600; padding-right:.24rem;}
+.wash-service li .wash-gray{color:#666;} 
+
