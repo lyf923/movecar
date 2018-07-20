@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>洗车美容订单</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css?v=1.2" />    
+	<link rel="stylesheet" href="css/movecar.css?v=1.2" />
+    <link rel="stylesheet" href="css/slick.css?v=1.2" />
+    <link rel="stylesheet" href="css/wash.css?v=1.2" />
+    <script src="js/jquery.js?v=1.2"></script> 
+    
+</head>
+<body>
+	<!-- 头部 -->
+	<header class="g-header3">
+		
+		<h1>洗车美容订单</h1>
+	</header>
+   
+    <section class="gbd-top order js-articel">      	
+    	<ul class="order-list ">
+        	 <li><p ><span class="pay-left">省委机关汽修厂</span><span class="pay-right font-green">待使用</span></p></li>
+        	 <li><p><span class="pay-left">商品名称</span><span class="pay-right">内饰清洁</span></p></li>
+             <li><p><span class="pay-left">商品单价</span><span class="pay-right">19.9元</span></p></li>
+             <li><p><span class="pay-left">订单编号</span><span class="pay-right">12345678965</span></p></li>
+             <li><p><span class="pay-left">下单时间</span><span class="pay-right">2018-7-20 16:00</span></p></li>
+        </ul>
+        <ul class="order-list">
+        	 <li><p ><span class="pay-left">省委机关汽修厂</span><span class="pay-right font-gray">已使用</span></p></li>
+        	 <li><p><span class="pay-left">商品名称</span><span class="pay-right">内饰清洁</span></p></li>
+             <li><p><span class="pay-left">商品单价</span><span class="pay-right">19.9元</span></p></li>
+             <li><p><span class="pay-left">订单编号</span><span class="pay-right">12345678965</span></p></li>
+             <li><p><span class="pay-left">下单时间</span><span class="pay-right">2018-7-20 16:00</span></p></li>
+        </ul>
+        <ul class="order-list">
+        	 <li><p ><span class="pay-left">省委机关汽修厂</span><span class="pay-right font-gray">已使用</span></p></li>
+        	 <li><p><span class="pay-left">商品名称</span><span class="pay-right">内饰清洁</span></p></li>
+             <li><p><span class="pay-left">商品单价</span><span class="pay-right">19.9元</span></p></li>
+             <li><p><span class="pay-left">订单编号</span><span class="pay-right">12345678965</span></p></li>
+             <li><p><span class="pay-left">下单时间</span><span class="pay-right">2018-7-20 16:00</span></p></li>
+        </ul>
+        <ul class="order-list">
+        	 <li><p ><span class="pay-left">省委机关汽修厂</span><span class="pay-right font-gray">已使用</span></p></li>
+        	 <li><p><span class="pay-left">商品名称</span><span class="pay-right">内饰清洁</span></p></li>
+             <li><p><span class="pay-left">商品单价</span><span class="pay-right">19.9元</span></p></li>
+             <li><p><span class="pay-left">订单编号</span><span class="pay-right">12345678965</span></p></li>
+             <li><p><span class="pay-left">下单时间</span><span class="pay-right">2018-7-20 16:00</span></p></li>
+        </ul>
+	</section>	
+   
+    <div style="padding-top:1.18rem; clear:both;"></div>
+	<footer class="g-nav1 cen">
+		<ul>
+			<li><a href="index.html"><i class="icon1"></i>首页</a></li>
+			<li class="on"><a href="my.html"><i class="icon2"></i>我的</a></li>
+		</ul>
+	</footer>
+    <script type="text/javascript">
+		$(function(){
+		//上划加载
+			loadingNewList();
+		});
+		//上划加载
+		function loadingNewList(){
+			$(window).scroll(function() {
+			    if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+			      	$(".g-loading").show();
+			      	//以下为ajax请求数据，现在模拟数据，后期自行替换
+			      	var html='<ul class="order-list">'+
+								'<li><p ><span class="pay-left">省委机关汽修厂</span><span class="pay-right font-gray">已使用</span></p></li>'+
+								'<li><p><span class="pay-left">商品名称</span><span class="pay-right">内饰清洁</span></p></li>'+
+								'<li><p><span class="pay-left">商品单价</span><span class="pay-right">19.9元</span></p></li>'+
+								'<li><p><span class="pay-left">订单编号</span><span class="pay-right">12345678965</span></p></li>'+
+								'<li><p><span class="pay-left">下单时间</span><span class="pay-right">2018-7-20 16:00</span></p></li>'+
+							'</ul>';
+					for(var i=0;i<6;i++){
+						html+=html;
+					}
+			      	$(".js-articel").append(html);
+			      	$(".g-loading").hide();
+			    }
+			});
+		}
+		
+	</script>
+  
+</body>
+</html>
