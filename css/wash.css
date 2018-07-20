@@ -26,4 +26,23 @@ article .rmb .buy{ background:#34adfc; color:#fff;}
     left: .24rem;
     text-align: left;
 }
-
+/*微信安全支付*/
+.gbd-top{ margin-top:.96rem;}
+.pay{ text-align:center; line-height:.68rem;}
+.pay,.pay-list{ color:#333; letter-spacing:.03rem;}
+.pay .price{ font-size:.48rem; font-weight:600;}
+.pay-list{ background:#fff;}
+.pay-list li{ line-height:.72rem; border-bottom:#efebef solid .01rem; }
+.pay-list .pay-left{ text-align:left; padding-left:.24rem;}
+.pay-list .pay-right{float:right; padding-right:.24rem;}
+.btn-style{ background:#34adfc; color:#fff; text-align:center; border-radius:.08rem; margin:.68rem .24rem; line-height:.78rem;}
+/*订单列表*/
+.order{ margin-top:1.2rem;}
+.order-list{ color:#333; letter-spacing:.03rem; margin:0 .24rem; margin-top:.24rem; border-radius:.12rem;}
+.order-list{border:#34adfc solid .01rem;}
+.order-list li:first-child{ border-bottom:#34adfc solid .01rem;background: #c0e2f9;}
+.order-list li{ line-height:.58rem; }
+.order-list .pay-left{ text-align:left; padding-left:.24rem;}
+.order-list .pay-right{float:right; padding-right:.24rem;}
+.order-list .font-green{ color:#45ce0f;}
+.order-list .font-gray{ color:#999;}
