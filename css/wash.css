@@ -42,7 +42,7 @@ article .rmb .buy{ background:#34adfc; color:#fff;}
 .order-list{border:#efebef solid .01rem;}
 .order-list li:first-child{ border-bottom:#efebef solid .01rem;}
 .order-list li{ line-height:.58rem; }
-.order-list .pay-left{ text-align:left; padding-left:.24rem;}
+.order-list .pay-left{ text-align:left; padding-left:.24rem;padding:0 .24rem;}
 .order-list .pay-right{float:right; padding-right:.24rem;}
 .order-list .font-green{ color:#45ce0f;}
 .order-list .font-gray{ color:#999;}
