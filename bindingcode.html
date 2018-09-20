@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定挪车码</title>
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cui.css" />
+	<link rel="stylesheet" href="css/movecar.css" />
+    <link rel="stylesheet" href="css/sel.css" />
+    <script src="js/jquery.js"></script>
+	<script src="js/selCity.js"></script>
+	<script src="layer_mobile/layer.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+   <style type="text/css">
+    *{    margin: 0; padding: 0;list-style:none;border:0; box-sizing:border-box;}
+    body{ background-color:#BAFE90;}
+.clearfix:after { content: "."; display: block; font-size: 0; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-table;}
+*html .clearfix { height: 1%; }
+.clearfix { display: block; }
+*+html .clearfix { min-height: 1%; }
+    .che_tit{ text-align:center; font-size:.24rem; color:#333;}
+    .ul_pro{ background-color:#CED3D9; text-align:center; padding:.04rem .02rem; font-size:.14rem;}
+    .ul_pro li{ float:left; width:11.11%; padding:2px;box-sizing: border-box;}
+    .ul_pro .li_close{  float:right; width:22.22%;}
+    .ul_pro .li_close span{ background-color:#ACB3BB;}
+    .ul_pro .li_clean{  float:right; width:22.22%;}
+    .ul_pro li span{ display:block; background-color:#fff; border-radius:.04rem; box-shadow: .02rem .02rem .02rem #888888; /* max-width:48px; margin:0 auto; */ line-height:.32rem; padding-top:.02rem;  }
+.ul_pro li span:active{ background-color:#4DA9F2; color:#fff;}
+
+.ul_input{ padding:0; margin:0 auto;text-align:center; }
+.ul_input li{ display:inline-block; width:.68rem;height:.68rem; text-align:center;vertical-align: middle;}
+.ul_input li span{ display:block; background-color:#fff; border:1px solid #ccc; border-radius:.04rem; margin:0 auto; height:.6rem; line-height:.6rem; }
+
+
+
+.ul_keybord{ background-color:#CED3D9; text-align:center; padding:.04rem .02rem; font-size:.24rem;}
+.ul_keybord li{ float:left; width:10%; padding:.02rem;box-sizing: border-box;}
+.ul_keybord .ikey20{ margin-left:5%;}
+.ul_keybord .li_w{ width:11.11%; }
+
+
+.ul_keybord .li_close{  float:right; width:22.22%;}
+.ul_keybord .li_close span{ background-color:#ACB3BB;}
+.ul_keybord .li_clean{  float:right; width:22.22%;}
+.ul_keybord li span{ display:block; background-color:#fff; border-radius:.04rem; box-shadow: .02rem .02rem .02rem #888888; /* max-width:48px; margin:0 auto; */ line-height:.32rem; padding-top:.02rem;  }
+.ul_keybord li span:active{ background-color:#4DA9F2; color:#fff;}
+.ck{ text-align:center; }
+.ck input{ border:.01rem solid #999; text-align:center;width: .24rem;height: .24rem; margin-right:.12rem; color:#333;} 
+.ck input:checked { background:#34adfc;
+}
+.ul_input li{ 
+border-bottom:none; !important
+} 
+
+    </style>
+</head>
+<body class="gray">
+	<!-- 头部 -->
+	<header class="g-header3">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<h1>挪车</h1>
+	</header>
+    <div class="banner1">
+    	<img src="images/icon1.png"/>
+    </div>
+	<section class="g-bd1">
+  		<ul class="m-eval">			
+			
+			<li style="height:2rem; line-height:.68rem">
+				
+    <div class="">
+        
+        <div class="che_tit">输入车牌号</div>
+        <div class="car_input">
+            <ul class="clearfix ul_input">
+                <li class="input_pro"><span></span></li>
+                <li class="input_pp input_zim"><span></span></li>
+                <li class="input_pp"><span></span></li>
+                <li class="input_pp"><span></span></li>
+                <li class="input_pp"><span></span></li>
+                <li class="input_pp"><span></span></li>
+                <li class="input_pp"><span></span></li>
+            
+            </ul>
+        </div>
+        </div>
+    <div class="ck"><input type="checkbox">新能源车</div>
+			</li>
+			<li>
+				<span class="tit"></i>联系方式</span>
+				<div class="con con1 con2">
+					<input type="text" class="inp inp1" placeholder="请输入联系方式">
+					<input type="button" class="btn-code" value="获取验证码" onclick="settime(this)">
+				</div>
+			</li>
+			<li>
+				<span class="tit"></i>验证码</span>
+				<div class="con">
+					<input type="text" class="inp inp1" placeholder="请输入验证码">
+				</div>
+			</li>
+		</ul>
+	 </section>
+	 <div class="title cen">
+          <h1>绑定挪车码</h1>
+         <img src="images/icon4.png"/>
+     </div>
+     <p class="cen button">确定</p>
+
+	
+	
+	<script>
+	//获取验证码
+		var countdown=60; 
+		function settime(obj) { 
+			if (countdown == 0) { 
+				obj.removeAttribute("disabled");    
+				obj.value="获取验证码"; 
+				countdown = 60; 
+				return;
+			} else { 
+				obj.setAttribute("disabled", true); 
+				obj.value="重新发送(" + countdown + ")"; 
+				countdown--; 
+			} 
+		setTimeout(function() { 
+			settime(obj) }
+			,1000) 
+		}
+		//新能源
+		
+		$(function(){
+    $("input[type=checkbox]").click(function(){
+        var str = '<li class="input_pp last_pp"><span></span></li>';
+        var liNum = $(".ul_input").find("span").text().length-1;
+        if($(this).is(":checked")){
+        
+            $("#cb1").attr("checked",false);
+            $(".ul_input").append(str);
+            
+            next = liNum;
+        }else{
+        
+            $("#cb1").attr("checked",true);
+            $(".ul_input").find(".last_pp").remove();
+            
+            var pai = $(".car_input").attr("data-pai");
+            pai=pai.replace(/(^\s*)|(\s*$)/g,"");
+            console.log(liNum);
+            if(liNum>6){
+                
+                pai=pai.substring(0,pai.length-1);
+                $(".car_input").attr("data-pai",pai);
+            }
+        }
+    });
+});
+	</script>
+	
+</body>
+</html>
